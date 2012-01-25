@@ -203,7 +203,7 @@
                         if ((osc_recaptcha_private_key() != '') && Params::existParam("recaptcha_challenge_field")) {
                             if(!osc_check_recaptcha()) {
                                 osc_add_flash_error_message( _m('The Recaptcha code is wrong')) ;
-                                $this->redirectTo( osc_item_post_url() );
+                                $this->redirectTo( osc_item_edit_url() );
                                 return false; // BREAK THE PROCESS, THE RECAPTCHA IS WRONG
                             }
                         }
